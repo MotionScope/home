@@ -96,11 +96,16 @@
       font-weight: 600;
     }
 
-    .section4 {
+    .section4{
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       padding: 5% 10%;
+    }
+    .thumbnail {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .section4 iframe {
@@ -119,6 +124,14 @@
       width: 210px;
       height: 120px;
     }
+    .thumbnail img{
+      width: 32%;
+      margin: 1%;
+      border-radius: 15px;
+    } .thumbnail{
+      color: white;
+    }
+    
 
 
     @media (max-width: 768px) {
@@ -139,7 +152,7 @@
         flex-direction: column;
       }
 
-      .section2 p {
+      .section2 p, .thumbnail p {
         font-size: 12px;
       }
 
@@ -180,7 +193,7 @@
         background: none;
       }
 
-      .section4 iframe {
+      .section4 iframe{
         width: 48%;
         height: 85px;
         border-radius: 7px;
@@ -189,6 +202,8 @@
       .manyMore {
         font-size: 39px;
       }
+      .thumbnail img{
+      width: 48%;}
     }
   </style>
 </head>
@@ -228,7 +243,7 @@
   <div class="section3">
     <h1>Talking Head</h1>
     <p>Bring your brand to the forefront with our talking head video expertise, where articulate storytelling meets
-      engaging visuals for a powerful and authentic connection.</p>
+      engaging visuals for a powerful and authentic connection. </p>
     <div class="imgBox3">
       <div class="card3">
         <video src="before_talking.MP4" type="video/mp4" id="video" autoplay loop muted controls></video>
@@ -284,6 +299,18 @@
       title="YouTube video player" frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowfullscreen></iframe>
+  </div>
+
+  <center>
+    <h1 class="manyMore">Thumbnail</h1>
+  </center>
+  <div class="thumbnail">
+    <center><p>Experience the art of intrigue! We creates visually stunning thumbnails, sparking curiosity and inviting viewers into a world of captivating narratives without revealing a face</p></center>
+    
+    <img src="IMG_1336.JPG" alt="">
+    <img src="IMG_1335.JPG" alt="">
+    <img src="IMG_1334.JPG" alt="">
+    <img src="IMG_1337.JPG" alt="">
   </div>
 
   <div class="gallery">
