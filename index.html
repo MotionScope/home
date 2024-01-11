@@ -78,6 +78,26 @@
       font-weight: 600;
     }
 
+    .meeting{
+      padding: 5% 5% 0% 5%;
+      color: white;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    } .meetingText{
+      font-size: 3em;
+      font-weight: 600;
+    } .meetingBtn{
+      background-color: red;
+      border-radius: 15px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 150px;
+      height: 72px;
+    }
+
     .imgBox3 {
       display: flex;
       justify-content: center;
@@ -96,12 +116,13 @@
       font-weight: 600;
     }
 
-    .section4{
+    .section4 {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       padding: 5% 10%;
     }
+
     .thumbnail {
       display: flex;
       flex-wrap: wrap;
@@ -124,14 +145,17 @@
       width: 210px;
       height: 120px;
     }
-    .thumbnail img{
+
+    .thumbnail img {
       width: 32%;
       margin: 1%;
       border-radius: 15px;
-    } .thumbnail{
+    }
+
+    .thumbnail {
       color: white;
     }
-    
+
 
 
     @media (max-width: 768px) {
@@ -140,6 +164,12 @@
         justify-content: center;
       }
 
+      .meetingText{
+      font-size: 34px;}
+      .meetingBtn{
+        height: 100px;
+        width: 135px;
+      }
       .motion {
         font-size: 2em;
       }
@@ -152,7 +182,8 @@
         flex-direction: column;
       }
 
-      .section2 p, .thumbnail p {
+      .section2 p,
+      .thumbnail p {
         font-size: 12px;
       }
 
@@ -162,7 +193,7 @@
         margin-bottom: 5%;
       }
 
-      .section3 h1 {
+      .section3 h1, #meetingText {
         font-size: 20px;
       }
 
@@ -193,7 +224,7 @@
         background: none;
       }
 
-      .section4 iframe{
+      .section4 iframe {
         width: 48%;
         height: 85px;
         border-radius: 7px;
@@ -202,8 +233,10 @@
       .manyMore {
         font-size: 39px;
       }
-      .thumbnail img{
-      width: 48%;}
+
+      .thumbnail img {
+        width: 48%;
+      }
     }
   </style>
 </head>
@@ -278,7 +311,10 @@
   </center>
 
   <div class="section4">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZAj6kBDOr1Y?si=MzxA3mQXXVIHg6WZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZAj6kBDOr1Y?si=MzxA3mQXXVIHg6WZ"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/9mSXUAbpNkc?si=LHg0zl-2-ps0e84U"
       title="YouTube video player" frameborder="0"
@@ -305,8 +341,11 @@
     <h1 class="manyMore">Thumbnail</h1>
   </center>
   <div class="thumbnail">
-    <center><p>Experience the art of intrigue! We creates visually stunning thumbnails, sparking curiosity and inviting viewers into a world of captivating narratives without revealing a face</p></center>
-    
+    <center>
+      <p>Experience the art of intrigue! We creates visually stunning thumbnails, sparking curiosity and inviting
+        viewers into a world of captivating narratives without revealing a face</p>
+    </center>
+
     <img src="https://i.postimg.cc/gkZ617Ym/Thumbnail-Portfolio-5.png" alt="">
     <img src="https://i.postimg.cc/y8CSKTd9/Thumbnail-Portfolio-2.png" alt="">
     <img src="https://i.postimg.cc/brn2JxQD/Thumbnail-Portfolio-3.png" alt="">
@@ -430,12 +469,13 @@
         <div class="grid gap-y-10 sm:grid-cols-2 sm:gap-y-12 lg:grid-cols-3 lg:divide-x">
           <!-- quote - start -->
           <div class="flex flex-col items-center gap-4 sm:px-4 md:gap-6 lg:px-8">
-            <div class="text-center text-gray-100">“Your editing skills are top-notch! You brought my vision to life effortlessly – Thank you!”</div>
+            <div class="text-center text-gray-100">“Your editing skills are top-notch! You brought my vision to life
+              effortlessly – Thank you!”</div>
 
             <div class="flex flex-col items-center gap-2 sm:flex-row md:gap-3">
               <div class="h-12 w-12 overflow-hidden rounded-full bg-gray-100 shadow-lg md:h-14 md:w-14">
-                <img src="https://i.postimg.cc/ZnBChZLC/channels4-profile.jpg"
-                  loading="lazy" alt="Photo by Radu Florin" class="h-full w-full object-cover object-center" />
+                <img src="https://i.postimg.cc/ZnBChZLC/channels4-profile.jpg" loading="lazy" alt="Photo by Radu Florin"
+                  class="h-full w-full object-cover object-center" />
               </div>
 
               <div>
@@ -449,16 +489,18 @@
 
           <!-- quote - start -->
           <div class="flex flex-col items-center gap-4 sm:px-4 md:gap-6 lg:px-8">
-            <div class="text-center text-gray-100">“Impressive professionalism and timely delivery. Exceeded expectations with attention to detail. Highly recommended!”</div>
+            <div class="text-center text-gray-100">“Impressive professionalism and timely delivery. Exceeded
+              expectations with attention to detail. Highly recommended!”</div>
 
             <div class="flex flex-col items-center gap-2 sm:flex-row md:gap-3">
               <div class="h-12 w-12 overflow-hidden rounded-full bg-gray-100 shadow-lg md:h-14 md:w-14">
-                <img src="https://i.postimg.cc/CK7ZGc1L/channels4-profile-1.jpg"
-                  loading="lazy" alt="Photo by christian ferrer" class="h-full w-full object-cover object-center" />
+                <img src="https://i.postimg.cc/CK7ZGc1L/channels4-profile-1.jpg" loading="lazy"
+                  alt="Photo by christian ferrer" class="h-full w-full object-cover object-center" />
               </div>
 
               <div>
-                <div class="text-center text-sm font-bold text-indigo-500 sm:text-left md:text-base">Archit Mehrotra</div>
+                <div class="text-center text-sm font-bold text-indigo-500 sm:text-left md:text-base">Archit Mehrotra
+                </div>
                 <p class="text-center text-sm text-gray-500 sm:text-left md:text-sm">300k+ Followers</p>
               </div>
             </div>
@@ -467,16 +509,18 @@
 
           <!-- quote - start -->
           <div class="flex flex-col items-center gap-4 sm:px-4 md:gap-6 lg:px-8">
-            <div class="text-center text-gray-100">“Your creative touch is pure magic! Thank you for turning my project into a visual masterpiece.”</div>
+            <div class="text-center text-gray-100">“Your creative touch is pure magic! Thank you for turning my project
+              into a visual masterpiece.”</div>
 
             <div class="flex flex-col items-center gap-2 sm:flex-row md:gap-3">
               <div class="h-12 w-12 overflow-hidden rounded-full bg-gray-100 shadow-lg md:h-14 md:w-14">
-                <img src="https://i.postimg.cc/jj3gj0fz/channels4-profile-2.jpg"
-                  loading="lazy" alt="Photo by Ayo Ogunseinde" class="h-full w-full object-cover object-center" />
+                <img src="https://i.postimg.cc/jj3gj0fz/channels4-profile-2.jpg" loading="lazy"
+                  alt="Photo by Ayo Ogunseinde" class="h-full w-full object-cover object-center" />
               </div>
 
               <div>
-                <div class="text-center text-sm font-bold text-indigo-500 sm:text-left md:text-base">Jirie Caribbean</div>
+                <div class="text-center text-sm font-bold text-indigo-500 sm:text-left md:text-base">Jirie Caribbean
+                </div>
                 <p class="text-center text-sm text-gray-500 sm:text-left md:text-sm">50k+ Subscribers</p>
               </div>
             </div>
@@ -486,6 +530,15 @@
       </div>
     </div>
   </div>
+
+  <div class="meeting">
+    <div class="meetingText">Curious or confused?</div>
+
+    <a href="https://calendly.com/motionscope/30min" target="_blank"><div class="meetingBtn"><b>Have a Convo!</b></div></a>
+  </div>
+    
+
+
 
   <div class="footer">
     <div class="bg-black pt-4 sm:pt-10 lg:pt-12">
