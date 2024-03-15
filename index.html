@@ -48,7 +48,7 @@
       text-align: center;
     }
 
-    .section2 h1 {
+    .section2 h1, .results h1 {
       font-size: 3em;
       font-weight: 600;
     }
@@ -78,16 +78,20 @@
       font-weight: 600;
     }
 
-    .meeting{
+    .meeting {
       padding: 5% 5% 0% 5%;
       color: white;
       display: flex;
       flex-direction: row;
       justify-content: space-around;
-    } .meetingText{
+    }
+
+    .meetingText {
       font-size: 3em;
       font-weight: 600;
-    } .meetingBtn{
+    }
+
+    .meetingBtn {
       background-color: #666dfa;
       border-radius: 15px;
       text-align: center;
@@ -154,8 +158,19 @@
 
     .thumbnail {
       color: white;
+      margin: 0 15px 0 15px;
     }
 
+    .results{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      color: white;
+      padding-top: 100px;
+      margin: 0 15px 0 15px;
+    }
 
 
     @media (max-width: 768px) {
@@ -164,12 +179,15 @@
         justify-content: center;
       }
 
-      .meetingText{
-      font-size: 34px;}
-      .meetingBtn{
+      .meetingText {
+        font-size: 34px;
+      }
+
+      .meetingBtn {
         height: 100px;
         width: 135px;
       }
+
       .motion {
         font-size: 2em;
       }
@@ -183,17 +201,19 @@
       }
 
       .section2 p,
-      .thumbnail p {
+      .thumbnail p,
+      .results p {
         font-size: 12px;
       }
 
-      .section2 h1 {
+      .section2 h1, .results h1 {
         font-size: 39px;
         line-height: 1.1;
         margin-bottom: 5%;
       }
 
-      .section3 h1, #meetingText {
+      .section3 h1,
+      #meetingText {
         font-size: 20px;
       }
 
@@ -236,6 +256,10 @@
 
       .thumbnail img {
         width: 48%;
+      }
+
+      .results .carousel-container{
+        width: 300px !important;
       }
     }
   </style>
@@ -350,6 +374,24 @@
     <img src="https://i.postimg.cc/y8CSKTd9/Thumbnail-Portfolio-2.png" alt="">
     <img src="https://i.postimg.cc/brn2JxQD/Thumbnail-Portfolio-3.png" alt="">
     <img src="https://i.postimg.cc/DfGW1cXm/Thumbnail-Portfolio-6.png" alt="">
+  </div>
+
+  <div class="results">
+    <h1>Our Result</Video></h1>
+    <p>Our results speak volumes! Our previous clients rave about the exceptional quality of our work. Check out the attached screenshots for proof.</p>
+    <div class="carousel-container" style="width: 600px; overflow: hidden; position: relative; margin-top: 20px;">
+      <div class="carousel-track" style="display: flex; transition: transform 0.5s ease-in-out;">
+        <div class="carousel-slide" style="flex: 0 0 auto; width: 100%;"><img
+            src="https://i.postimg.cc/LXJjmZ4M/Whats-App-Image-2024-03-15-at-1-14-55-PM.jpg" style="width: 100%; border-radius: 13px;"
+            alt="Slide 1"></div>
+        <div class="carousel-slide" style="flex: 0 0 auto; width: 100%;"><img
+            src="https://i.postimg.cc/zfcR2XC2/Whats-App-Image-2024-03-15-at-1-14-56-PM-1.jpg" style="width: 100%;border-radius: 13px;"
+            alt="Slide 2"></div>
+        <div class="carousel-slide" style="flex: 0 0 auto; width: 100%;"><img
+            src="https://i.postimg.cc/pXfzVvvy/Whats-App-Image-2024-03-15-at-1-14-56-PM.jpg" style="width: 100%;border-radius: 13px;"
+            alt="Slide 3"></div>
+      </div>
+    </div>
   </div>
 
   <div class="gallery">
@@ -534,11 +576,10 @@
   <div class="meeting">
     <div class="meetingText">Curious or confused?</div>
 
-    <a href="https://calendly.com/motionscope/30min" target="_blank"><div class="meetingBtn"><b>Have a Convo!</b></div></a>
+    <a href="https://calendly.com/motionscope/30min" target="_blank">
+      <div class="meetingBtn"><b>Have a Convo!</b></div>
+    </a>
   </div>
-    
-
-
 
   <div class="footer">
     <div class="bg-black pt-4 sm:pt-10 lg:pt-12">
@@ -636,6 +677,47 @@
 
     // Initial check for video visibility
     handleVideoVisibility();
+  </script>
+  <script>
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const slideWidth = slides[0].getBoundingClientRect().width;
+
+    // Arrange slides next to each other
+    slides.forEach((slide, index) => {
+      slide.style.left = slideWidth * index + 'px';
+    });
+
+    let currentIndex = 0;
+
+    function moveToSlide(index) {
+      track.style.transform = `translateX(-${slides[index].style.left})`;
+      currentIndex = index;
+    }
+
+    function moveToNextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      moveToSlide(currentIndex);
+    }
+
+    // Automatically slide after a certain amount of time
+    const intervalTime = 3000; // Change time as needed (in milliseconds)
+    let slideInterval;
+
+    function startSlideInterval() {
+      slideInterval = setInterval(moveToNextSlide, intervalTime);
+    }
+
+    function stopSlideInterval() {
+      clearInterval(slideInterval);
+    }
+
+    // Start sliding automatically
+    startSlideInterval();
+
+    // Pause sliding on hover
+    document.querySelector('.carousel-container').addEventListener('mouseenter', stopSlideInterval);
+    document.querySelector('.carousel-container').addEventListener('mouseleave', startSlideInterval);
   </script>
 
 </body>
